@@ -9,7 +9,7 @@ export default class Header extends Component {
     render(){
         return(
             <View style={styles.header}>
-                <Text>{this.props.heading}</Text>
+                <Text style={styles.headerText}>{this.props.headerText}</Text>
             </View>
         );        
     }
@@ -17,6 +17,20 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     header: {
-        alignItems: 'center'
+        backgroundColor: '#F8F8F8',
+        alignItems: 'center',
+        height: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        shadowColor: 'black',
+        shadowOffset: {width: 10, height: 10},
+        shadowOpacity: 1,
+        elevation: 3
+    },
+    headerText: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: 'black',
+        fontStyle: 'italic'
     }
 });
