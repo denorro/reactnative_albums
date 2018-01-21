@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Platform, StyleSheet, Text, View, ScrollView } from 'react-native';
+  Platform, StyleSheet, Text, View } from 'react-native';
 import Header from './src/components/Header';
 import Divider from './src/components/Divider';
 import AlbumList from './src/components/AlbumList';
@@ -12,19 +12,13 @@ export default class App extends Component {
     return (
         <View style={styles.container}>
           <Header headerText={'Albums'} />
-            <ScrollView contentContainerStyle={styles.scrollViewContentContainer}>
-              <AlbumList />
-            </ScrollView>          
+          <AlbumList />
         </View>      
     );
   }
 }
 
-const styles = StyleSheet.create({
-  scrollViewContentContainer: {
-    flexGrow: 1,
-    margin: 5
-  },
+const styles = StyleSheet.create({  
   container: {
     flex: 1
   },

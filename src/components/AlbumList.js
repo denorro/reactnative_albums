@@ -26,6 +26,7 @@ export default class AlbumList extends Component {
                 albumName={album.title} 
                 artistName={album.artist} 
                 albumImage={album.image}
+                url={album.url}
                 />
         );
     }
@@ -33,9 +34,16 @@ export default class AlbumList extends Component {
     render(){
         console.log('State: ', this.state);
         return(
-            <View>
+            <ScrollView contentContainerStyle={styles.scrollViewContentContainer}>
                 {this.renderAlbums()}                         
-            </View>
+            </ScrollView>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    scrollViewContentContainer: {
+        flexGrow: 1,
+        margin: 5
+      }
+})
