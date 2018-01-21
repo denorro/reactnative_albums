@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
         shadowColor: 'black',
         shadowOffset: {width: 10, height: 10},
         shadowOpacity: 1,
-        elevation: 3
+        elevation: 3,
+        marginBottom: 5
     },
     headerText: {
         fontSize: 20,
